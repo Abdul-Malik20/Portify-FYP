@@ -8,12 +8,10 @@ function Footer() {
       style={{
         textAlign: "center",
         padding: "10px",
-        backgroundColor: "#f1f1f1",
+        backgroundColor: "#E3FEF7",
       }}
     >
-      <p>
-        © {currentYear} <b>Portify</b>. All rights reserved.
-      </p>
+      <p>© {currentYear} <b>Portify</b>. All rights reserved.</p>
     </footer>
   );
 }

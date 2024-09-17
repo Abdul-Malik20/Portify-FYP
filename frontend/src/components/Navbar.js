@@ -1,28 +1,33 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChargingStation } from "@fortawesome/free-solid-svg-icons"; // Import specific icons
 import { Link } from "react-router-dom";
 
-function CustomNavbar() {
+function Header() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar
+      expand="lg"
+      className="nav"
+      style={{ backgroundColor: "#E3FEF7" }}
+      fixed="top"
+    >
       <Container>
         <Navbar.Brand as={Link} to="/">
           <FontAwesomeIcon icon={faChargingStation} /> <b>Portify</b>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
-              Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="/about">
-              About
-            </Nav.Link>
-            <Nav.Link as={Link} to="/contact">
-              Contact
-            </Nav.Link>
+          <Nav className="ms-auto">
+            <br />
+            <Button
+              variant="outline-dark"
+              className="ms-auto"
+              as={Link}
+              to="/nearby"
+            >
+              Nearby Station
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -30,4 +35,4 @@ function CustomNavbar() {
   );
 }
 
-export default CustomNavbar;
+export default Header;
